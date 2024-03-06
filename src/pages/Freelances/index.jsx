@@ -1,33 +1,43 @@
 import Card from '../../components/Card'
+import styled from 'styled-components'
 
 const freelanceProfiles = [
-  {
-    name: 'Jane Doe',
-    jobTitle: 'Devops',
-  },
-  {
-    name: 'John Doe',
-    jobTitle: 'Developpeur frontend',
-  },
-  {
-    name: 'Jeanne Biche',
-    jobTitle: 'Développeuse Fullstack',
-  },
+   {
+      name: 'Jane Doe',
+      jobTitle: 'Devops',
+   },
+   {
+      name: 'John Doe',
+      jobTitle: 'Developpeur frontend',
+   },
+   {
+      name: 'Jeanne Biche',
+      jobTitle: 'Développeuse Fullstack',
+   },
 ]
 
+const CardsContainer = styled.div`
+   display: grid;
+   gap: 24px;
+   grid-template-rows: 350px 350px;
+   grid-template-columns: repeat(2, 1fr);
+`
+
 function Freelances() {
-  return (
-    <>
-      <h3>Freelances</h3>
-      {freelanceProfiles.map((profile, index) => (
-        <Card
-          key={`${profile.name}-${index}`}
-          label={profile.jobTitle}
-          title={profile.name}
-        />
-      ))}
-    </>
-  )
+   return (
+      <>
+         <h3>Freelances</h3>
+         <CardsContainer>
+            {freelanceProfiles.map((profile, index) => (
+               <Card
+                  key={`${profile.name}-${index}`}
+                  label={profile.jobTitle}
+                  title={profile.name}
+               />
+            ))}
+         </CardsContainer>
+      </>
+   )
 }
 
 export default Freelances
