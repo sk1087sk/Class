@@ -1,7 +1,7 @@
 import styled from 'styled-components'
-import colors from '../../style/colors'
+import colors from '../../utils/style/colors'
 import homeImg from '../../assets/home-illustration.svg'
-import { StyledLink } from '../../style/Atoms'
+import { StyledLink } from '../../utils/style/Atoms'
 
 const HomeWrapper = styled.div`
    display: flex;
