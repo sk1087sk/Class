@@ -22,7 +22,6 @@ export const SurveyProvider = ({ children }) => {
    const saveAnswers = (newAnswers) => {
       setAnswers({ ...answers, ...newAnswers })
    }
-   console.log(answers)
 
    return (
       <SurveyContext.Provider value={{ answers, saveAnswers }}>
