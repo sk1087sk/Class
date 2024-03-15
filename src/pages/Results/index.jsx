@@ -64,6 +64,13 @@ function formatQueryParams(answers) {
    }, '')
 }
 
+export function formatJobList(title, listLength, index) {
+   if (index === listLength - 1) {
+      return title
+   }
+   return `${title},`
+}
+
 function Results() {
    const { theme } = useContext(ThemeContext)
    const { answers } = useContext(SurveyContext)
@@ -100,6 +107,7 @@ function Results() {
                   >
                      {result.title}
                      {index === resultsData.length - 1 ? '' : ','}
+                     {formatJobList(result.title, resultsData.length, index)}
                   </JobTitle>
                ))}
          </ResultsTitle>
