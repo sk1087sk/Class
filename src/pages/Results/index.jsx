@@ -54,7 +54,7 @@ const LoaderWrapper = styled.div`
    justify-content: center;
 `
 
-function formatQueryParams(answers) {
+export function formatQueryParams(answers) {
    const answerNumbers = Object.keys(answers)
 
    return answerNumbers.reduce((previousParams, answerNumber, index) => {
@@ -105,8 +105,8 @@ function Results() {
                      key={`result-title-${index}-${result.title}`}
                      theme={theme}
                   >
-                     {result.title}
-                     {index === resultsData.length - 1 ? '' : ','}
+                     {/* {result.title}
+                     {index === resultsData.length - 1 ? '' : ','} */}
                      {formatJobList(result.title, resultsData.length, index)}
                   </JobTitle>
                ))}
