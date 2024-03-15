@@ -72,9 +72,7 @@ function Survey() {
    }
 
    const { data, isLoading, error } = useFetch(`http://localhost:8000/survey`)
-   console.log(data)
    const { surveyData } = data
-   console.log(surveyData)
 
    // useEffect(() => {
    //    async function fetchSurvey() {
